@@ -6,12 +6,12 @@ readarray -t mass < <(ls /home/user/clay/12.0)
 #echo ${#mass[@]}
 
 for i in "${mass[@]}"; do
-	echo sravnenue: "$i"
+	#echo sravnenue: "$i"
 	tek="diff <(xxd /hive/miners/claymore/12.0/$i) <(xxd /home/user/clay/12.0/$i) > /home/user/clay/result"
-	cat $tek
+	#echo $tek
 	eval $tek
-	if [[ -s /home/user/clay/result ]]; then echo "$i: raznie"; else echo "$i: OK"; fi
-
+	if [[ -s /home/user/clay/result ]]; then echo "$i	raznie"; else echo "$i	OK"; fi
+	#break
 done
 
 exit 0
