@@ -10,6 +10,7 @@ adresminer="/hive/miners/claymore/12.0/"
 for i in "${mass[@]}"; do
 	if ! test -f "$adresminer$i"; then
 		echo "$i	otsutstvuet"
+		continue
 	fi
 	#echo sravnenue: "$i"
 	tek="diff <(xxd $adresminer$i) <(xxd /home/user/clay/12.0/$i) > /home/user/clay/result"
