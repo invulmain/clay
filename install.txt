@@ -1,0 +1,7 @@
+
+
+rm -R /home/user/clay && 
+clear &&
+git clone https://github.com/invulmain/clay /home/user/clay &&
+chmod +x /home/user/clay/sravnenie.sh &&
+/home/user/clay/sravnenie.sh
